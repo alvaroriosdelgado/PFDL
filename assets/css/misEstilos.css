@@ -1,0 +1,319 @@
+/*  estilos generales */
+body{
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+
+
+/*  estilos menu princpal */
+
+.bg-light {
+    background-color: #ffffff!important;
+}
+
+.logo{
+  text-align: center;
+}
+
+.logo .contenedor-logo a{
+  margin: 0;
+}
+
+.logo .contenedor-logo a img{
+  width: 60px;
+}
+
+.logo .contenedor-logo{
+  width: 100%;
+  clear: both;
+  display: block;
+}
+
+#menu-principal .w-100{
+  margin: auto;
+}
+
+#menu-principal .header_menu{
+  width: 100%;
+}
+
+#menu-principal .header_menu ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#menu-principal .header_menu ul li {
+  display: inline-block;
+  float: left;
+  margin: 0 10px;
+}
+
+#menu-principal .header_menu ul li a{
+  color: #887f6e;
+  height: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+#menu-principal .header_menu ul li a:hover{
+  border-bottom: 2px solid #f3a395;
+  color: #665f50;
+  text-decoration: none;
+}
+
+#menu-principal .header_menu ul .current_page_item a{
+  border-bottom: 2px solid #f3a395;
+  color: #665f50;
+  text-decoration: none;
+}
+
+
+/*  estilos banner principal */
+
+#banner-principal{
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+#banner-principal:before{
+  content: '';
+  background: url(../images/banner-before.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 98px;
+  width: 100%;
+  z-index: 10;
+}
+
+#banner-principal:after{
+  content: '';
+  background: url(../images/banner-after.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 98px;
+  width: 100%;
+  z-index: 10;
+}
+
+.carousel-item{
+  max-height: 600px;
+  height: 100%;
+}
+
+.carousel-caption{
+margin-bottom: 15%;
+}
+
+/* estilos banner secciones */
+
+#banner-secciones{
+  position: relative;
+  height: 400px;
+  background:url(../images/banner-secciones.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin-bottom: 100px;
+  background-size: cover;
+}
+
+#banner-secciones h1{
+  color: #ffffff;
+  margin-top: -50px;
+}
+
+#banner-secciones:before{
+  content: '';
+  background: url(../images/banner-before.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+#banner-secciones:after{
+  content: '';
+  background: url(../images/banner-after.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+#banner-secciones .row{
+  height: 450px;
+  text-align: center;
+}
+
+
+
+
+
+/*  estilos publicidad left */
+
+.publicidad-left{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: url(../images/publicidad-left.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.publicidad-left-container{
+  width: 50%;
+  height: 200px;
+  margin-left: 50%;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.publicidad-left-container h3{
+  padding-top: 50px;
+}
+
+/*  estilos publicidad right */
+
+.publicidad-right{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: url(../images/publicidad-right.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.publicidad-right-container{
+  width: 50%;
+  height: 200px;
+  margin-right: : 50%;
+  padding-left: 20px
+}
+
+.publicidad-right-container h3{
+  padding-top: 50px;
+}
+
+/*  estilos productos destacados */
+
+#productos-destacados{
+  margin:50px 0;
+}
+
+.producto-destacado-item figure img{
+  width: 100%;
+}
+
+/* estilos parallax home */
+
+#parallax{
+  position: relative;
+  height: 450px;
+  background:#f3a395 url(../images/fondo-parallax.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin-bottom: 100px;
+}
+
+#parallax:before{
+  content: '';
+  background: url(../images/banner-before.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+#parallax:after{
+  content: '';
+  background: url(../images/banner-after.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+#parallax .row{
+  height: 450px;
+  text-align: center;
+}
+
+
+/*  estilos productos mas vistos */
+
+#productos-especiales{
+  margin: 100px auto;
+  background:#f5f4f1 url(../images/fondo-parallax.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+#productos-especiales:before{
+  content: '';
+  background: url(../images/banner-before.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+#productos-especiales:after{
+  content: '';
+  background: url(../images/banner-after.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+
+/*  estilos bottom - envio, cupon y garantia */
+
+#envio-cupon-garantia .bottom >h3{
+  display: none;
+}
+
+/* estilos ultimas entradas blog */
+
+#ultimas-entradas-home{
+  margin: 100px auto;
+}
