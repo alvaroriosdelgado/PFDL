@@ -1,5 +1,6 @@
 <?php get_header() ?>
 
+<!--Seccionbanner principal - carrusel bootstrap 4 -->
 <section id="banner-principal">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -23,7 +24,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/slider-1.jpg" alt="Third slide">
+      <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/slider-3.jpg" alt="Third slide">
       <div class="carousel-caption d-none d-md-block">
         <h3>Slider 3</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -41,9 +42,11 @@
 </div>
 </section>
 
+
+<!--Seccion espacios publicitarios-->
 <section id="publicidad-top">
   <div class="container">
-    <div class="row w-100">
+    <div class="row">
       <div class="col-12 col-md-6">
         <?php if ( is_active_sidebar( 'publicidad_left_widget' ) ) : ?>
       		<?php dynamic_sidebar( 'publicidad_left_widget' ); ?>
@@ -56,8 +59,11 @@
       </div>
     </div>
   </div>
+  <div class="linea-bottom"></div>
 </section>
 
+
+<!--Seccion productos destacados de la tienda online -->
 <section id="productos-destacados">
   <div class="container">
     <h2 class="text-center">Productos Destacados del Més</h2>
@@ -81,8 +87,8 @@
                 <?php the_post_thumbnail('productos_destacados_img'); ?>
               </figure>
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              <h4><?php the_field('precio_producto'); ?></h4>
-              <a href="<?php the_field('enlace_producto') ?>">ver producto</a>
+              <h4 class="precio"><?php the_field('precio_producto'); ?></h4>
+              <a class="btn-pink" href="<?php the_field('enlace_producto') ?>">ver producto</a>
             </div>
 
         </div>
@@ -91,8 +97,11 @@
 
       </div>
     </div>
+    <div class="linea-bottom"></div>
 </section>
 
+
+<!--Seccion parallax  -->
 <section id="parallax">
   <div class="container">
     <div class="row align-items-center">
@@ -103,15 +112,14 @@
       </div>
     </div>
   </div>
-
-
 </section>
 
+
+<!--Seccion categorias destacadas d la tienda online -->
 <section id="categorias-destacadas">
   <div class="container">
     <h2 class="text-center">Categorias Destacadas</h2>
     <div class="row">
-
         <?php
           $args = array(
             'post_type' => 'destacados',
@@ -126,22 +134,21 @@
 
         <div class="col-12 col-md-3">
             <div class="categorias-destacadas-item">
-              <figure class="thumbnail">
+              <figure>
                 <?php the_post_thumbnail('categorias_destacadas_img'); ?>
+                <figcaption><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></figcaption>
               </figure>
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
             </div>
-
         </div>
-
         <?php endwhile; wp_reset_postdata(); ?>
-
       </div>
     </div>
-
   </div>
 </section>
 
+
+<!--Seccion productos especiales - edicion limitada -->
 <section id="productos-especiales">
   <div class="container">
     <h2 class="text-center">Productos Especiales<br><span>Edición Limitada</span></h2>
@@ -165,8 +172,8 @@
                 <?php the_post_thumbnail('productos_especiales_img'); ?>
               </figure>
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              <h4><?php the_field('precio_producto'); ?></h4>
-              <a href="<?php the_field('enlace_producto') ?>">ver producto</a>
+              <h4 class="precio"><?php the_field('precio_producto'); ?></h4>
+              <a class="btn-pink" href="<?php the_field('enlace_producto') ?>">ver producto</a>
             </div>
         </div>
         <?php endwhile; wp_reset_postdata(); ?>
@@ -174,14 +181,19 @@
   </div>
 </section>
 
+
+<!--Seccion caracteristicas servicio -->
 <section id="envio-cupon-garantia">
   <div class="container">
         <?php if ( is_active_sidebar( 'bottom_widget' ) ) : ?>
       		<?php dynamic_sidebar( 'bottom_widget' ); ?>
       	<?php endif; ?>
   </div>
+  <div class="linea-bottom"></div>
 </section>
 
+
+<!--Seccion ultimas entradas del blog -->
 <section id="ultimas-entradas-home">
   <div class="container">
     <h2 class="text-center">Últimas Entradas del Blog</h2>
@@ -195,10 +207,11 @@
         <div class="col-12 col-md-4">
           <div class="entradas">
             <figure>
-              <?php the_post_thumbnail('entradas_blog_img') ?>
+              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('entradas_blog_img') ?></a>
+              <figcaption><div class="fecha-post"><p><?php echo the_time('d'); ?></p><span>|</span> <p><?php echo the_time('M'); ?></p></div></figcaption>
             </figure>
-            <?php the_time(get_option('date_format')); ?>
-            <h3><?php the_title(); ?></h3>
+
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             <?php the_excerpt(); ?>
           </div>
         </div>

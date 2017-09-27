@@ -24,7 +24,7 @@
 		add_image_size( 'categorias_destacadas_img', 248, 248, true);		// Personalización de los productos destacados
 		add_image_size( 'productos_especiales_img', 248, 248, true);		// Personalización de los productos destacados
 		add_image_size( 'entradas_blog_img', 342, 260, true);		// Personalización de las entradas del blog
-		add_image_size( 'single_blog_img', 770, 435, true);		// Personalización de las entradas del blog single
+		add_image_size( 'single_blog_img', 730, 435, true);		// Personalización de las entradas del blog single
 		add_image_size( 'nosotros_img', 528, 408, true);		// Personalización sección nosotros
 		add_filter('image_size_names_choose', 'dl_image_sizes');
 	}

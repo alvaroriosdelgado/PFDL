@@ -13,8 +13,8 @@
 
 
 		wp_enqueue_style('mainStyle');
-		wp_enqueue_style('bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css");
 		wp_enqueue_style('fontawesome');
+		wp_enqueue_style('bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css");
 		wp_enqueue_style('misEstilos');
 	}
 

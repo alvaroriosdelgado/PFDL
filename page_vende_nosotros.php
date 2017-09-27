@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contacto
+Template Name: Vende con nosotros
 */
  ?>
 
@@ -8,7 +8,7 @@ Template Name: Contacto
 
 <?php get_template_part('templates_part/banner', 'secciones'); ?>
 
-<section ="Contacto">
+<section ="vende">
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
@@ -18,15 +18,10 @@ Template Name: Contacto
       </section>
     </div>
     <div class="col-12 col-md-6">
-      <?php get_template_part('templates_part/formulario', 'contacto'); ?>     
+      <?php get_template_part('templates_part/formulario', 'contacto'); ?>
     </div>
   </div>
 </div>
 </section>
-
-<section id="google-maps">
-  aca va el mapá de google
-</section>
-
 
 <?php get_footer() ?>

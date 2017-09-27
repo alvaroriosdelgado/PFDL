@@ -1,23 +1,40 @@
 <?php get_header() ?>
 
-	<?php if (have_posts()) { ?>
+<?php get_template_part('templates_part/banner', 'secciones'); ?>
 
-	<ul>
-		<?php while ( have_posts() ) { the_post(); ?>
-		<li>
-			<a href="<?php the_permalink() ?>">
-				<?php the_post_thumbnail() ?>
-				<?php the_title() ?>
-				<time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('d \d\e F \d\e Y') ?></time>
-				<?php the_excerpt() ?>
-			</a>
-		</li>
-		<?php }; ?>
-	</ul>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="row">
+          <?php
+            $args = array(
+              'post_type' => 'post',
+              'posts_per_page' => 6,
+              'orderby' => 'date',
+              'oder' => 'ASC',
+            );
+            $blogposts = new WP_Query($args);
+          while($blogposts->have_posts()): $blogposts->the_post(); ?>
+          <div class="col-12 col-md-6">
+              <figure>
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('entradas_blog_img'); ?></a>
+              </figure>
+              <?php echo the_time('d'); ?><?php echo the_time('M'); ?>
+              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">Leer más</a>
+          </div>
+        <?php endwhile; wp_reset_postdata();?>
+        </div>
+      </div>
 
-	<?php } else { ?>
-		<!-- Content -->
-	<?php } wp_reset_query(); ?>
+      <div class="col-12 col-md-4">
+        <?php get_sidebar('blog') ?>
+      </div>
+    </div>
 
-	<?php get_sidebar() ?>
+
+  </div>
+</main>
 <?php get_footer() ?>

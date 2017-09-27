@@ -1,7 +1,8 @@
 /*  estilos generales */
-body{
+html, body{
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
+  font-size: 14px!important;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -9,7 +10,44 @@ h1,h2,h3,h4,h5,h6{
   font-weight: bold;
 }
 
+p, a, span, li{
+  font-family: 'Open-sans', sans-serif;
+  font-weight: normal;
+}
 
+.linea-bottom{
+  max-width: 1100px;
+  width: 100%;
+  height: 1px;
+  margin: 50px auto;
+  border-bottom: 1px dashed #e9e7e2;
+
+}
+
+h4.precio{
+  text-align: center;
+  color: #000000;
+  font-size: 1.0rem;
+  margin-top:10px;
+  margin-bottom: 20px;
+}
+
+a.btn-pink{
+  text-align: center;
+  display: inline-block!important;
+  margin: auto;
+  color: #999;
+  font-size: .7rem!important;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: 1px dashed #f3a395;
+  border-radius: 30px;
+}
+
+/*********************************************************
+ESTILOS FRONT PAGE
+**********************************************************/
 
 /*  estilos menu princpal */
 
@@ -80,9 +118,16 @@ h1,h2,h3,h4,h5,h6{
 /*  estilos banner principal */
 
 #banner-principal{
+  display: none;
+}
+
+@media only screen and (min-width:768px){
+
+#banner-principal{
   width: 100%;
   height: 600px;
   position: relative;
+  display: block;
 }
 
 #banner-principal:before{
@@ -116,6 +161,8 @@ h1,h2,h3,h4,h5,h6{
 
 .carousel-caption{
 margin-bottom: 15%;
+}
+
 }
 
 /* estilos banner secciones */
@@ -165,20 +212,20 @@ margin-bottom: 15%;
 }
 
 
+/*  estilos espacios publicitarios front page */
 
-
-
-/*  estilos publicidad left */
+#publicidad-top{
+  margin-top: 50px;
+}
 
 .publicidad-left{
-  margin-top: 50px;
-  margin-bottom: 50px;
   background: url(../images/publicidad-left.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 100%;
   height: 200px;
+  margin-bottom: 30px;
 }
 
 .publicidad-left-container{
@@ -190,14 +237,16 @@ margin-bottom: 15%;
 }
 
 .publicidad-left-container h3{
-  padding-top: 50px;
+  padding-top: 30px;
+  font-size: 1.2rem;
 }
 
-/*  estilos publicidad right */
+.publicidad-left-container p{
+  line-height: normal;
+}
+
 
 .publicidad-right{
-  margin-top: 50px;
-  margin-bottom: 50px;
   background: url(../images/publicidad-right.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -214,8 +263,27 @@ margin-bottom: 15%;
 }
 
 .publicidad-right-container h3{
-  padding-top: 50px;
+  padding-top: 30px;
+  font-size: 1.2rem
 }
+
+.publicidad-right-container p{
+  line-height: normal;
+}
+
+@media only screen and (min-width:768px){
+
+  .publicidad-left-container h3{
+    padding-top: 50px;
+    font-size: 1.75rem;
+  }
+
+  .publicidad-right-container h3{
+    padding-top: 50px;
+    font-size: 1.75rem
+  }
+}
+
 
 /*  estilos productos destacados */
 
@@ -223,9 +291,43 @@ margin-bottom: 15%;
   margin:50px 0;
 }
 
+#productos-destacados h2{
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+}
+
+.producto-destacado-item{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.producto-destacado-item a{
+  text-align: center;
+  display: block;
+  color: #999999;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.producto-destacado-item a:hover{
+  text-align: center;
+  display: block;
+  color: #999;
+  text-decoration: none;
+}
+
 .producto-destacado-item figure img{
   width: 100%;
 }
+
+@media only screen and (min-width:768px){
+  #productos-destacados h2{
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+  }
+}
+
+
 
 /* estilos parallax home */
 
@@ -267,8 +369,85 @@ margin-bottom: 15%;
   text-align: center;
 }
 
+.parallax-home h3{
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: #ffffff;
+}
 
-/*  estilos productos mas vistos */
+.parallax-home p{
+  color: #ffffff;
+  margin: 20px auto;
+}
+
+.parallax-home a.btn-white{
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  color: #fff;
+  font-size: 1rem!important;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: 2px dashed #ffffff;
+  border-radius: 30px;
+}
+
+/*  ESTILOS CATEGORIAS DESTACADAS */
+
+#categorias-destacadas h2{
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+}
+
+.categorias-destacadas-item{
+  margin-bottom: 30px;
+}
+
+.categorias-destacadas-item figure{
+  border: 1px solid #f1f1f1;
+  padding: 8px;
+  border-radius: 2px;
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.categorias-destacadas-item a{
+  position: absolute;
+  bottom: 30px;
+  display: block;
+  background: rgba(255,255,255,0.7);
+  height: 40px;
+  width: calc(100% - 16px);
+  z-index: 10;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.categorias-destacadas-item a:hover{
+  text-decoration: none;
+}
+
+.categorias-destacadas-item figure img{
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width:768px){
+  #categorias-destacadas h2{
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+
+/*  estilos productos especiales - edicion limitada  */
 
 #productos-especiales{
   margin: 100px auto;
@@ -305,6 +484,53 @@ margin-bottom: 15%;
   z-index: 10;
 }
 
+#productos-especiales h2{
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+}
+
+#productos-especiales h2 span{
+  font-size: 1rem;
+  color: #999999;
+}
+
+.productos-especiales-item{
+  background: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.productos-especiales-item figure{
+  width: 100%;
+  height: 248px;
+  overflow: hidden;
+}
+
+.productos-especiales-item figure img{
+  width: 100%;
+  height: auto;
+}
+
+.productos-especiales-item a{
+  text-align: center;
+  display: block;
+  color: #999999;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width:768px){
+  #productos-especiales h2{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  #productos-especiales h2 span{
+    font-size: 1.5rem;
+    color: #999999;
+  }
+}
+
 
 /*  estilos bottom - envio, cupon y garantia */
 
@@ -312,8 +538,171 @@ margin-bottom: 15%;
   display: none;
 }
 
+.bottom i{
+    background: #f3a395;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.bottom .envio{
+  background: #f5f4f1;
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+.bottom .cupon{
+  background: #f0eeea;
+  padding: 30px;
+  text-align: center;
+}
+
+.bottom .garantia{
+  background: #f5f4f1;
+  padding:30px;
+  text-align: center;
+}
+
+
 /* estilos ultimas entradas blog */
 
 #ultimas-entradas-home{
   margin: 100px auto;
+}
+
+#ultimas-entradas-home h2{
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+}
+
+.entradas figure{
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fecha-post{
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+  background: #f3a395;
+  border-radius: 30px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.fecha-post p{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.fecha-post span{
+  display: inline-block;
+  margin: 0 1px 0 5px;
+}
+
+.entradas figure img{
+  width: 100%;
+  height: auto;
+}
+
+.entradas a{
+  text-align: center;
+  color: #222;
+  font-size:1.5rem!important;
+  line-height: normal;
+  display: block;
+  margin-bottom: 20px
+}
+
+.entradas p{
+  text-align: center;
+}
+
+
+@media only screen and (min-width:768px){
+  #ultimas-entradas-home h2{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+}
+
+
+/* estilos footer - pie de pagina */
+
+footer{
+  background: #f0eeea;
+  padding-top: 150px;
+  position: relative;
+}
+
+footer:before{
+  content: '';
+  background: url(../images/banner-before.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
+  z-index: 10;
+}
+
+footer  h3{
+  color: #333;
+  font-size: 1.5rem;
+  border-left: 6px solid #f3a395;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+footer ul{
+  text-indent: 0;
+}
+
+footer ul li{
+  list-style: none;
+  border-bottom: 1px solid #e7e5e1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+footer ul li a{
+  display: block;
+  color: #999;
+}
+
+footer ul li i{
+  margin-right: 8px;
+  color: #999;
+}
+
+footer .copy{
+  height: 50px;
+  background: #f5f4f1;
+  line-height: 50px;
+  color: #999;
+}
+
+footer p{
+  margin: 0;
+}
+
+footer .by{
+  text-align: right;
+  font-size: 12px;
 }

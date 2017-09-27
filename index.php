@@ -7,7 +7,15 @@
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="row">
-          <?php while(have_posts()): the_post(); ?>
+          <?php
+            $args = array(
+              'post_type' => 'post',
+              'posts_per_page' => 6,
+              'orderby' => 'date',
+              'oder' => 'ASC',
+            );
+            $blogposts = new WP_Query($args);
+          while($blogposts->have_posts()): $blogposts->the_post(); ?>
           <div class="col-12 col-md-6">
               <figure>
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('entradas_blog_img'); ?></a>
@@ -17,7 +25,8 @@
               <?php the_excerpt(); ?>
               <a href="<?php the_permalink(); ?>">Leer más</a>
           </div>
-          <?php endwhile; ?>
+        <?php endwhile; wp_reset_postdata();?>
+
         </div>
       </div>
 
