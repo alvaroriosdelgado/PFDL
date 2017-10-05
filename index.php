@@ -7,38 +7,46 @@
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="row">
-          <?php
-            $args = array(
-              'post_type' => 'post',
-              'posts_per_page' => 6,
-              'orderby' => 'date',
-              'oder' => 'ASC',
-            );
-            $blogposts = new WP_Query($args);
-          while($blogposts->have_posts()): $blogposts->the_post(); ?>
+          <?php while(have_posts()): the_post(); ?>
           <div class="col-12 col-md-6">
+            <div class="entradas">
               <figure>
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('entradas_blog_img'); ?></a>
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('entradas_blog_img') ?></a>
+                <figcaption><div class="fecha-post"><p><?php echo the_time('d'); ?></p><span>|</span> <p><?php echo the_time('M'); ?></p></div></figcaption>
               </figure>
-              <?php echo the_time('d'); ?><?php echo the_time('M'); ?>
-              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
-              <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>">Leer más</a>
-          </div>
-        <?php endwhile; wp_reset_postdata();?>
 
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              <?php the_excerpt(); ?>
+            </div>
+          </div>
+          <?php endwhile;?>
+        </div>
+        <div class="paginacion">
+          <?php echo paginate_links(); ?>
         </div>
       </div>
-
       <div class="col-12 col-md-4">
-        <?php get_sidebar('blog') ?>
+        <div class="categorias-blog">
+        <h3>Categorias</h3>
+        <?php // get_sidebar('blog')
+          $categories = get_categories( array(
+              'orderby' => 'name',
+              'order'   => 'ASC',
+              'hide_empty'=> 1,
+              'exclude' => array(22,19,23)
+          ) );
+          foreach( $categories as $category ):  ?>
+
+            <a href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>"><?php echo  $category->name ?> (<?php echo   $category->count ?>)</a>
+
+        <?php endforeach; // end for each?>
+        </div>
+        <div class="sidebar-blog">
+          <?php get_sidebar('Blog') ?>
+        </div>
       </div>
     </div>
-
-
   </div>
 </main>
-
-
 
 <?php get_footer() ?>

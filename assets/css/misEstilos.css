@@ -13,6 +13,23 @@ h1,h2,h3,h4,h5,h6{
 p, a, span, li{
   font-family: 'Open-sans', sans-serif;
   font-weight: normal;
+  color: #999;
+}
+
+a:hover{
+  color: #f3a395;
+}
+
+input[type='text'], input[type='tel'], input[type='date'], input[type='email'], input[type='password'], input[type='number'], textarea, form.wpcf7-form input[type='text'], form.wpcf7-form textarea, form.wpcf7-form input[type='email'], form.wpcf7-form input[type='password'], form.wpcf7-form input[type='number'], form.wpcf7-form input[type='tel'] {
+    padding: 8px;
+    border: 1px solid;
+    border-color: #ddd #eee #eee #ddd!important;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
 }
 
 .linea-bottom{
@@ -679,11 +696,13 @@ footer ul li{
   padding-bottom: 10px;
   margin-bottom: 10px;
   color: #999;
+  line-height: normal;
 }
 
 footer ul li a{
   display: block;
   color: #999;
+  line-height: normal;
 }
 
 footer ul li i{
@@ -705,4 +724,146 @@ footer p{
 footer .by{
   text-align: right;
   font-size: 12px;
+}
+
+
+
+
+/*********************************************************
+ESTILOS BLOG
+**********************************************************/
+
+/*  estilos menu categorias */
+
+.categorias-blog{
+  margin-bottom: 50px;
+}
+
+.categorias-blog h3, .sidebar-blog h3{
+  color: #333;
+  font-size: 1.75rem;
+  border-left: 6px solid #f3a395;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.categorias-blog  a{
+  display: block;
+  border-bottom: 1px solid #e7e5e1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+
+
+/*  estilos comentarios recientes  */
+
+.sidebar-right{
+  margin-bottom: 50px;
+}
+
+.sidebar-right ul  li{
+  list-style: none;
+  border-bottom: 1px solid #e7e5e1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+.sidebar-right ul  li a{
+  color: #333333!important:
+}
+
+#recentcomments li{
+  list-style: none;
+  border-bottom: 1px solid #e7e5e1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color:#999999;
+}
+
+#recentcomments li a{
+  color: #333333;
+}
+
+#recentcomments li span.comment-author-link:hover{
+  color:#f3a395;
+}
+
+#recentcomments li a:hover{
+  color: #f3a395;
+}
+
+
+
+#detalle .detalle-post figure{
+  max-height: 435px;
+  overflow: hidden;
+}
+
+#detalle .detalle-post figure img{
+  width: 100%;
+  height: auto;
+}
+
+.detalle-post{
+  padding-right: 20px;
+}
+
+.paginacion{
+  margin-top: 50px;
+}
+
+/* estilos comentarios en el post */
+
+#respond{
+  margin-top: 100px;
+}
+
+#commentform p label{
+  width: 100%;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 13px;
+}
+
+#commentform p textarea{
+  width: 100%
+}
+
+#commentform p input{
+  width: 60%;
+}
+
+#commentform .form-submit{
+  margin-top: 30px;
+}
+
+#commentform p #submit{
+  margin-top: 20px;
+  width: 200px;
+  background-color: #ffffff;
+  text-align: center;
+  display: inline-block!important;
+  margin: auto;
+  color: #999;
+  font-size: .7rem!important;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: 1px dashed #f3a395;
+  border-radius: 30px;
+}
+
+/*  estilos nosotros  */
+
+/*  estilos contacto  */
+
+#map{
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

@@ -18,15 +18,17 @@ Template Name: Contacto
       </section>
     </div>
     <div class="col-12 col-md-6">
-      <?php get_template_part('templates_part/formulario', 'contacto'); ?>     
+      <?php get_template_part('templates_part/formulario', 'contacto'); ?>
     </div>
   </div>
 </div>
 </section>
 
-<section id="google-maps">
-  aca va el mapá de google
+<section id="map">
+
 </section>
+
+
 
 
 <?php get_footer() ?>
