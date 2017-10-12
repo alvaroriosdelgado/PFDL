@@ -1,6 +1,72 @@
-# Wordpress Boilerplate
+# Proyecto Final
+
 
 ## Introducción
-Esta es una plantilla básica, que tiene como objetivo ayudar a la gente que comienza recién a crear plantillas para Wordpress. Incorpora algunas de las últimas tecnologías implementadas por el equipo de Wordpress y también otras que le entregarán a los desarrolladores una base mínima para crear exitosamente un Theme.
+
+Amiel es un E-commerce enfocado a la venta de productos artesanales hechos a mano y en Chile.
+Se usa el bolierplate para la construcción del theme principal y un child theme para la construcción del theme de la tienda online con Woocommerce.
+
+La estructura de navegación del sitio web es:
 
 
+## Menú Principal
+•	Home
+•	Tienda Online
+    o	Deco Hogar
+    o	Mujer
+    o	Niños
+•	Sobre Nosotros
+•	Blog
+    o	Exposiciones
+    o	Novedades
+    o	Tips
+    o	Tutoriales
+•	Contacto
+
+## Menú Pie de Pagina
+•	Términos y condiciones
+•	Información de envió
+•	Vende con nosotros
+•	Galería de Imágenes
+•	Mi cuenta
+
+## Menú Redes Sociales
+•	Facebook
+•	Instagram
+•	Pinterest
+•	Google Plus
+
+
+## Las funcionalidades más importantes del sitio son:
+
+Grid Responsive – Flexbox (Bootstrap 4)
+Menú Principal Responsive (Botstrap 4 - Jquery)
+Banner Principal (Bootstrap 4 - Jquery)
+Font Awesome
+Google Fonts
+Breadcrumbs
+Paginación
+Page Templates
+Template Parts
+Formulario de Contacto (Bootstrap 4)
+Productos Destacados (Custom Post Type + Advanced Custom Field)
+Galería de Imágenes con Fluidbox (Jquery)
+Google Maps (API Google Maps)
+Custom Widgets
+Google Analytics
+Scroll Buttom Top (Jquery)
+
+
+
+## Plugins
+Woocommerce
+Advanced Custom Filelds
+Regenerate Thumbnails
+Breadcrumb NavXT
+Google Analytics Dashboard for WP
+
+## Extras - Dificultad
+Woocommerce Child Theme
+Formulario de Contacto (Bootstrap 4 + Php + Sql)
+Sanitización y seguridad formulario de contacto
+Ver registros formularios de contacto como Theme Option
