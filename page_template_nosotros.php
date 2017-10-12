@@ -15,27 +15,32 @@
 				<?php the_post_thumbnail('nosotros_img') ?>
 			</div>
 			<div class="col-12 col-md-6">
-				<h2><?php the_title(); ?></h2>
-				<?php the_post(); ?>
-				<?php the_content(); ?>
+        <div class="nosotros-texto">
+          <h2><?php the_title(); ?></h2>
+  				<?php the_post(); ?>
+  				<?php the_content(); ?>
+        </div>
 			</div>
 		</div>
 	</div>
 </main>
 
 <section id="caracteristicas">
-	<?php $recent = new WP_Query("page_id=88"); while($recent->have_posts()) : $recent->the_post();?>
-		<?php the_content(); ?>
-	<?php endwhile; ?>
+  <?php $caracteristicas = new WP_Query("page_id=88"); while($caracteristicas->have_posts()) : $caracteristicas->the_post();?>
+    <?php the_content(); ?>
+  <?php endwhile; ?>
+
 </section>
 
 <section id="que-hacemos">
 	<div class="container">
 		<div class="row">
-				<?php $recent = new WP_Query("page_id=90"); while($recent->have_posts()) : $recent->the_post();?>
+				<?php $que_hacemos = new WP_Query("page_id=90"); while($que_hacemos->have_posts()) : $que_hacemos->the_post();?>
 					<div class="col-12 col-md-6">
-					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
+            <div class="que-hacemos-texto">
+              <h2><?php the_title(); ?></h2>
+    					<?php the_content(); ?>
+            </div>
 				</div>
 				<div class="col-12 col-md-6">
 					<?php the_post_thumbnail('nosotros_img') ?>

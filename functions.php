@@ -1,5 +1,9 @@
 <?php
 
+	require get_template_directory() . '/inc/database.php';
+	require get_template_directory() . '/inc/consultas.php';
+	require get_template_directory() . '/inc/registros.php';
+
 	$files = glob(get_template_directory() . '/functions/*.php');
 
 	foreach($files as $file) {

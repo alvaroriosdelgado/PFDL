@@ -6,6 +6,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php get_template_part('_includes/iOS', 'icons') ?>
 	<?php wp_head() ?>
+
+	
 </head>
 <body>
 <section id="top">

@@ -2,7 +2,7 @@
 
 <?php get_template_part('templates_part/banner', 'secciones'); ?>
 
-<main>
+<main>  
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-8">

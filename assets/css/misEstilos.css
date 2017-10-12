@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6{
   font-weight: bold;
 }
 
-p, a, span, li{
+p, span, li{
   font-family: 'Open-sans', sans-serif;
   font-weight: normal;
   color: #999;
@@ -197,6 +197,10 @@ margin-bottom: 15%;
 #banner-secciones h1{
   color: #ffffff;
   margin-top: -50px;
+}
+
+#banner-secciones .breadcrumbs a span, #banner-secciones .breadcrumbs span, #banner-secciones .breadcrumbs{
+  color: #ffffff!important;
 }
 
 #banner-secciones:before{
@@ -859,7 +863,100 @@ ESTILOS BLOG
 
 /*  estilos nosotros  */
 
+#que-hacemos{
+  margin-bottom: 50px;
+}
+
+#nosotros .nosotros-texto, #que-hacemos .que-hacemos-texto{
+  height: 408px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#nosotros .nosotros-texto h2, #que-hacemos .que-hacemos-texto h2{
+  color: #2b3033;
+  font-size: 44px;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#nosotros .nosotros-texto h3, #que-hacemos .que-hacemos-texto h3{
+  color: #2b3033;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
+    line-height: 1.625em;
+}
+
+#nosotros .nosotros-texto p, #que-hacemos .que-hacemos-texto p{
+  text-align: center;
+  margin: .85em 0;
+  line-height: 1.625em;
+}
+
+#caracteristicas{
+  height: 450px;
+  margin: 100px 0;
+  background: url(../images/fondo-caracteristicas.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#caracteristicas .row{
+  height: 450px;
+}
+
+.caracteristicas-item {
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    padding: 49px;
+    text-align: center;
+}
+
+.caracteristicas-item i{
+  font-size: 3rem;
+  color: #e9e7e2;
+  font-weight: normal;
+}
+
+.caracteristicas-item h3{
+  font-size: 21px;
+  font-weight: normal;
+}
+
+.caracteristicas-item p{
+  margin: .85em 0;
+  line-height: 1.625em;
+  color: #999;
+}
+
+
 /*  estilos contacto  */
+
+#formulario-contacto{
+  border: 1px solid #d9d7d0;
+  padding: 30px;
+  background: #f5f5f5;
+}
+
+#datos-contacto .datos{
+  margin-top: 50px;
+}
+
+#datos-contacto .datos i{
+  margin-right: 5px;
+  text-align: center;
+}
 
 #map{
   width: 100%;
