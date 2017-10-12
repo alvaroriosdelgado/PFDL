@@ -12,7 +12,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<?php the_post_thumbnail('nosotros_img') ?>
+        <div class="nosotros-imagen">
+          <?php the_post_thumbnail('nosotros_img') ?>
+        </div>
 			</div>
 			<div class="col-12 col-md-6">
         <div class="nosotros-texto">
@@ -43,7 +45,10 @@
             </div>
 				</div>
 				<div class="col-12 col-md-6">
-					<?php the_post_thumbnail('nosotros_img') ?>
+          <div class="que-hacemos-imagen">
+            <?php the_post_thumbnail('nosotros_img') ?>
+          </div>
+
 				</div>
 				<?php endwhile; ?>
 			</div>

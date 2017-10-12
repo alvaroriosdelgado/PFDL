@@ -7,9 +7,9 @@
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="row">
-          <?php if (have_posts()) { ?>
 
-            <?php while ( have_posts() ) { the_post(); ?>
+
+            <?php while(have_posts()): the_post(); ?>
             <div class="col-12 col-md-6">
               <div class="entradas">
                 <figure>
@@ -19,14 +19,13 @@
 
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>" class="btn-pink">Leer más</a>
               </div>
             </div>
-            <?php }; ?>
-          <?php } else { ?>
-            <!-- Content -->
-          <?php } wp_reset_query(); ?>
-
-
+            <?php endwhile;?>
+        </div>
+        <div class="paginacion">
+          <?php echo paginate_links(); ?>
         </div>
       </div>
 

@@ -86,7 +86,7 @@
               <figure>
                 <?php the_post_thumbnail('productos_destacados_img'); ?>
               </figure>
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              <a href="<?php the_field('enlace_producto') ?>"><?php the_title(); ?></a>
               <h4 class="precio"><?php the_field('precio_producto'); ?></h4>
               <a class="btn-pink" href="<?php the_field('enlace_producto') ?>">ver producto</a>
             </div>
@@ -136,7 +136,7 @@
             <div class="categorias-destacadas-item">
               <figure>
                 <?php the_post_thumbnail('categorias_destacadas_img'); ?>
-                <figcaption><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></figcaption>
+                <figcaption><a href="<?php the_field('link_de_caterogia') ?>"><?php the_title(); ?></a></figcaption>
               </figure>
 
             </div>
@@ -211,8 +211,9 @@
               <figcaption><div class="fecha-post"><p><?php echo the_time('d'); ?></p><span>|</span> <p><?php echo the_time('M'); ?></p></div></figcaption>
             </figure>
 
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <a href="<?php the_permalink(); ?>" class="titulo-link"><?php the_title(); ?></a>
             <?php the_excerpt(); ?>
+            <a href="<?php the_permalink(); ?>" class="btn-pink">Leer más</a>
           </div>
         </div>
         <?php endwhile; wp_reset_postdata(); ?>
