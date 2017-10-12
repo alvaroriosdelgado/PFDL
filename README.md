@@ -39,6 +39,7 @@ La estructura de navegación del sitio web es:
 
 ## Las funcionalidades más importantes del sitio son:
 
+* Bootstrap 4
 * Grid Responsive – Flexbox (Bootstrap 4)
 * Menú Principal Responsive (Botstrap 4 - Jquery)
 * Banner Principal (Bootstrap 4 - Jquery)
@@ -75,3 +76,8 @@ La estructura de navegación del sitio web es:
 ## Acceso Administrador
 Usuario: amielADM  
 Clave:  amieladmin2017!
+
+
+## Archivo Proyecto
+
+Se sube carpeta llamada proyecto+base-de-datos.zip que contiene el sitio web completo en s y la base de datos en .sql
