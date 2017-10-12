@@ -80,4 +80,4 @@ Clave:  amieladmin2017!
 
 ## Archivo Proyecto
 
-Se sube carpeta llamada proyecto+base-de-datos.zip que contiene el sitio web completo en s y la base de datos en .sql
+Se sube carpeta llamada proyecto+base-de-datos.zip que contiene el sitio web completo y la base de datos en .sql
