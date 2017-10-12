@@ -72,5 +72,6 @@ La estructura de navegación del sitio web es:
 * Ver registros formularios de contacto como Theme Option
 
 
+## Acceso Administrador
 Usuario: amielADM  
 Clave:  amieladmin2017
