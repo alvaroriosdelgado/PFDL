@@ -74,4 +74,4 @@ La estructura de navegación del sitio web es:
 
 ## Acceso Administrador
 Usuario: amielADM  
-Clave:  amieladmin2017
+Clave:  amieladmin2017!
